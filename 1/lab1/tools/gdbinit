@@ -1,0 +1,7 @@
+file bin/kernel
+target remote :1234
+break kern_init
+continue
+b *0x7c00
+c
+x /10i $pc
